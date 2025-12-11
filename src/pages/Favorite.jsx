@@ -40,7 +40,7 @@ function Favorites() {
 
               <div className="p-4 flex flex-col items-center text-center">
                 <h2 className="text-lg font-semibold mb-1 truncate w-full">{movie.Title}</h2>
-                <p className="text-yellow-400 mb-2">⭐ {movie.imdbRating || "N/A"}</p>
+                {/* <p className="text-yellow-400 mb-2">⭐ {movie.imdbRating || "N/A"}</p> */}
 
                 <div className="flex flex-col sm:flex-row gap-2">
                   <Link

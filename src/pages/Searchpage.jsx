@@ -15,7 +15,7 @@ function SearchPage() {
 
     const fetchMovies = async () => {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=985d4a31&s=${encodeURIComponent(query)}`
+        `https://www.omdbapi.com/?apikey=985d4a31&s=${encodeURIComponent(query)}`
       );
       const data = await res.json();
       setMovies(data.Search || []);

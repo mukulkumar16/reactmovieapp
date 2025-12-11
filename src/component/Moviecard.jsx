@@ -31,7 +31,7 @@ function MovieCard({ movie }) {
         group
       ">
         
-        {/* Poster */}
+       
         <div className="relative">
           <img
             src={movie.Poster !== "N/A" ? movie.Poster : "/placeholder.png"}
@@ -39,7 +39,7 @@ function MovieCard({ movie }) {
             className="w-full h-72 object-cover transition duration-300 group-hover:brightness-75"
           />
 
-          {/* Favorite Button */}
+          
           <button
             onClick={handleFavoriteClick}
             className="
@@ -57,7 +57,7 @@ function MovieCard({ movie }) {
           </button>
         </div>
 
-        {/* Content */}
+       
         <div className="p-4 text-center">
           <h3 className="text-lg font-bold text-white truncate">
             {movie.Title}

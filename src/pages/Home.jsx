@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Fetchmovies from "../component/Fetchmovies";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
+
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState("Action");
@@ -21,10 +20,9 @@ function Home() {
     <>
      
 
-      {/* Main Container */}
       <div className="px-4 md:px-10 py-10 space-y-16 bg-[#0f0f0f] min-h-screen text-white">
 
-        {/* Category Section */}
+       
         <section>
           <h2 className="text-3xl font-bold mb-4 md:mb-6">
             Browse by Category
@@ -50,7 +48,7 @@ function Home() {
             ))}
           </div>
 
-          {/* Category Movies Row */}
+          
           <div className="mt-8">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">
               {selectedCategory} Movies
@@ -59,7 +57,7 @@ function Home() {
           </div>
         </section>
 
-        {/* Additional Cinematic Sections */}
+        
         <section>
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">Iron Man</h2>
           <Fetchmovies movie="Iron Man" />
@@ -86,8 +84,6 @@ function Home() {
         </section>
       </div>
 
-      {/* Footer (optional) */}
-      {/* <Footer /> */}
     </>
   );
 }

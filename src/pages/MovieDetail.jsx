@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { FavoritesContext } from "../component/FavContext";
-import Header from "../component/Header";
+
 
 function MovieDetails() {
   const { id } = useParams();
@@ -12,7 +12,7 @@ function MovieDetails() {
   useEffect(() => {
     async function fetchMovieDetails() {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=985d4a31&i=${id}`
+        `https://www.omdbapi.com/?apikey=985d4a31&i=${id}`
       );
       const data = await res.json();
       setMovie(data);
@@ -39,12 +39,12 @@ function MovieDetails() {
 
   return (
     <>
-      {/* <Header /> */}
+     
 
       <div className="min-h-screen bg-[#0f0f0f] text-white p-8 flex justify-center">
         <div className="max-w-5xl w-full grid md:grid-cols-2 gap-10 bg-[#111] p-8 rounded-xl shadow-xl">
 
-          {/* Poster */}
+          
           <div className="flex justify-center md:justify-start">
             <img
               src={movie.Poster}
@@ -53,7 +53,7 @@ function MovieDetails() {
             />
           </div>
 
-          {/* Movie Info */}
+          
           <div className="flex flex-col justify-center space-y-5">
 
             <h1 className="text-4xl font-extrabold tracking-wide text-red-500">
@@ -72,7 +72,7 @@ function MovieDetails() {
               <p><span className="font-semibold text-white">Director:</span> {movie.Director}</p>
             </div>
 
-            {/* Favorite Button */}
+            
             <button
               onClick={toggleFavorite}
               className={`

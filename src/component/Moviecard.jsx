@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FavoritesContext } from "./FavContext";
+// import { HeartPlus } from "react-iconly";
 
 function MovieCard({ movie }) {
   const { addFavorite, removeFavorite, isFavorite } = useContext(FavoritesContext);
@@ -53,7 +54,7 @@ function MovieCard({ movie }) {
               hover:bg-opacity-70
             "
           >
-            {isFavorite(movie.imdbID) ? "❤️" : "🤍"}
+            {isFavorite(movie.imdbID) ? "❤️" : "🤍 "}
           </button>
         </div>
 

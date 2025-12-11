@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register } from "../store/AuthSlice";
@@ -8,7 +8,9 @@ function Register() {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  useEffect(() => {
+    
+  window.scrollTo({ top: 0, behavior: "smooth" });    }, []);
   const handleRegister = (e) => {
     e.preventDefault();
     dispatch(register({ email, password }));

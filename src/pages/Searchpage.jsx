@@ -11,6 +11,10 @@ function SearchPage() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
+    
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+
     if (!query) return;
 
     const fetchMovies = async () => {

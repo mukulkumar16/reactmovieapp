@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext , useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FavoritesContext } from "../component/FavContext";
 
 function Favorites() {
   const { favorites, removeFavorite } = useContext(FavoritesContext);
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, []);
+
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] p-6 text-white">

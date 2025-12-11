@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { FavoritesContext } from "../component/FavContext";
+import { CalendarDays } from "lucide-react";
+
+
 
 
 function MovieDetails() {
@@ -10,6 +13,7 @@ function MovieDetails() {
   const { addFavorite, removeFavorite, isFavorite } = useContext(FavoritesContext);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     async function fetchMovieDetails() {
       const res = await fetch(
         `https://www.omdbapi.com/?apikey=985d4a31&i=${id}`
@@ -67,7 +71,7 @@ function MovieDetails() {
             <div className="space-y-2 text-gray-400 text-sm md:text-base">
               <p><span className="font-semibold text-white">Released:</span> {movie.Released}</p>
               <p><span className="font-semibold text-white">Genre:</span> {movie.Genre}</p>
-              <p><span className="font-semibold text-white">IMDB Rating:</span> ⭐ {movie.imdbRating}</p>
+              <p><span className="font-semibold text-white">IMDB Rating:</span> {movie.imdbRating}</p>
               <p><span className="font-semibold text-white">Actors:</span> {movie.Actors}</p>
               <p><span className="font-semibold text-white">Director:</span> {movie.Director}</p>
             </div>

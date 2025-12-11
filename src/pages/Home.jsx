@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import Fetchmovies from "../component/Fetchmovies";
+
 
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState("Action");
+  
 
   const categories = [
     "Action",
@@ -15,6 +17,9 @@ function Home() {
     "Thriller",
     "Animation",
   ];
+useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, [selectedCategory]);
 
   return (
     <>
